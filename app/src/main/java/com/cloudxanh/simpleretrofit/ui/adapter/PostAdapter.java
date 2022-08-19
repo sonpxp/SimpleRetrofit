@@ -1,8 +1,7 @@
-package com.cloudxanh.simpleretrofit.ui;
+package com.cloudxanh.simpleretrofit.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -10,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.cloudxanh.simpleretrofit.data.model.Post;
 import com.cloudxanh.simpleretrofit.databinding.ItemPostBinding;
+import com.cloudxanh.simpleretrofit.ui.listener.ItemClickListener;
 
 import java.util.List;
 
@@ -18,9 +18,7 @@ import java.util.List;
  * Email: sonmob202@gmail.com
  */
 
-interface ItemClickListener {
-    void onClickItemPost(int id);
-}
+
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 

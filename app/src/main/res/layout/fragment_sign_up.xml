@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp"
+    tools:context=".ui.fragment.SignUpFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="SignUp screen"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email" />
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password" />
+
+    <TextView
+        android:id="@+id/tv_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ConfirmPassword" />
+
+    <EditText
+        android:id="@+id/et_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password" />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Sign up" />
+
+</LinearLayout>

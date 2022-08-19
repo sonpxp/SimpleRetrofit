@@ -1,16 +1,14 @@
-package com.cloudxanh.simpleretrofit.ui;
+package com.cloudxanh.simpleretrofit.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
-import com.cloudxanh.simpleretrofit.R;
 import com.cloudxanh.simpleretrofit.databinding.ActivityDetailBinding;
-import com.cloudxanh.simpleretrofit.databinding.ActivityMainBinding;
+import com.cloudxanh.simpleretrofit.ui.viewmodel.PostViewModel;
 
 public class DetailActivity extends AppCompatActivity {
 

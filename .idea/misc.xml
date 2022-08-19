@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kotlin/training/SimpleRetrofit/app/src/main/res/layout/activity_auth.xml" value="0.24615384615384617" />
         <entry key="..\:/Kotlin/training/SimpleRetrofit/app/src/main/res/layout/activity_detail.xml" value="0.2" />
         <entry key="..\:/Kotlin/training/SimpleRetrofit/app/src/main/res/layout/activity_main.xml" value="0.24615384615384617" />
+        <entry key="..\:/Kotlin/training/SimpleRetrofit/app/src/main/res/layout/fragment_forgot_password.xml" value="0.24615384615384617" />
+        <entry key="..\:/Kotlin/training/SimpleRetrofit/app/src/main/res/layout/fragment_login.xml" value="0.24615384615384617" />
+        <entry key="..\:/Kotlin/training/SimpleRetrofit/app/src/main/res/layout/fragment_sign_up.xml" value="0.24615384615384617" />
         <entry key="..\:/Kotlin/training/SimpleRetrofit/app/src/main/res/layout/item_post.xml" value="0.24512820512820513" />
+        <entry key="..\:/Kotlin/training/SimpleRetrofit/app/src/main/res/menu/nav_graph_auth.xml" value="0.24512820512820513" />
       </map>
     </option>
   </component>

@@ -1,4 +1,4 @@
-package com.cloudxanh.simpleretrofit.ui;
+package com.cloudxanh.simpleretrofit.ui.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
