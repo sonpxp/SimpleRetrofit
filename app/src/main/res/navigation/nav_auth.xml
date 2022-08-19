@@ -17,14 +17,22 @@
             android:id="@+id/to_forgotPasswordFragment"
             app:destination="@id/forgotPasswordFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.cloudxanh.simpleretrofit.ui.fragment.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
+
     <fragment
         android:id="@+id/forgotPasswordFragment"
         android:name="com.cloudxanh.simpleretrofit.ui.fragment.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" />
+        tools:layout="@layout/fragment_forgot_password">
+
+        <argument
+            android:defaultValue=""
+            android:name="emailArg"
+            app:argType="string" />
+    </fragment>
 </navigation>

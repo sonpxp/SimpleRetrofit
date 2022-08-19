@@ -18,11 +18,15 @@ import com.cloudxanh.simpleretrofit.ui.activity.MainActivity;
 public class LoginFragment extends Fragment {
 
     private FragmentLoginBinding binding;
+    private NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentLoginBinding.inflate(inflater, container, false);
+
+        // initial navController
+        navController = NavHostFragment.findNavController(this);
         handleView();
         return binding.getRoot();
     }
@@ -53,13 +57,25 @@ public class LoginFragment extends Fragment {
     }
 
     private void navigateToSignUp() {
-        NavController navController = NavHostFragment.findNavController(this);
         navController.navigate(R.id.to_signUpFragment);
     }
 
     private void navigateToForgotPassword() {
-        NavController navController = NavHostFragment.findNavController(this);
-        navController.navigate(R.id.to_forgotPasswordFragment);
+        // get email text
+        String email = binding.etEmail.getText().toString().trim();
+
+        // using bundle
+        // The first way
+        /*Bundle bundle = new Bundle();
+        bundle.putString("email", email);
+        Navigation.findNavController(view).navigate(R.id.to_forgotPasswordFragment, bundle);*/
+
+        // using set an argument
+        // 2nd way
+        LoginFragmentDirections.ToForgotPasswordFragment action =
+                LoginFragmentDirections.toForgotPasswordFragment();
+        action.setEmailArg(email);
+        navController.navigate(action);
     }
 
     @Override
