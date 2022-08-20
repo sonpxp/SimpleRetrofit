@@ -8,6 +8,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.cloudxanh.simpleretrofit.R;
 import com.cloudxanh.simpleretrofit.data.model.User;
@@ -49,8 +50,12 @@ public class ForgotPasswordFragment extends Fragment {
 
     private void getObjectUser(){
         User user = ForgotPasswordFragmentArgs.fromBundle(getArguments()).getUser();
-        binding.tvEmailDetail.setText(user.getEmail());
-        binding.tvPasswordDetail.setText(user.getPassword());
+        if (user != null){
+            binding.tvEmailDetail.setText(user.getEmail());
+            binding.tvPasswordDetail.setText(user.getPassword());
+        }else {
+            Toast.makeText(requireActivity(), "object null", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override

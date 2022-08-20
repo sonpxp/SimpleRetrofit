@@ -84,7 +84,7 @@ public class LoginFragment extends Fragment {
         navController.navigate(action);
     }
 
-    private void passObjectUserToForgotPassword(String email, String pass){
+    private void passObjectUserToForgotPassword(String email, String pass) {
         User user = new User(email, pass);
         LoginFragmentDirections.ToForgotPasswordFragment action =
                 LoginFragmentDirections.toForgotPasswordFragment();
