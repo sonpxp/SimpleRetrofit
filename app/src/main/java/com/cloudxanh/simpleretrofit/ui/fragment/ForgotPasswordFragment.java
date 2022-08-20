@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.cloudxanh.simpleretrofit.R;
+import com.cloudxanh.simpleretrofit.data.model.User;
 import com.cloudxanh.simpleretrofit.databinding.FragmentForgotPasswordBinding;
 import com.cloudxanh.simpleretrofit.databinding.FragmentLoginBinding;
 
@@ -27,7 +28,8 @@ public class ForgotPasswordFragment extends Fragment {
     }
 
     private void initialView(){
-        getDataFromBundle();
+        // getDataFromBundle();
+        getObjectUser();
     }
 
     private void getDataFromBundle() {
@@ -36,12 +38,19 @@ public class ForgotPasswordFragment extends Fragment {
         if (getArguments() != null) {
             String emailBundle = getArguments().getString("email");
         }
-        // using Args
+
+        // using Args, getString
         // 2nd way
-        String email = ForgotPasswordFragmentArgs.fromBundle(getArguments()).getEmailArg();
+        // String email = ForgotPasswordFragmentArgs.fromBundle(getArguments()).getEmailArg();
 
         // update data to ui
-        binding.etEmail.setText(email);
+        // binding.etEmail.setText(email);
+    }
+
+    private void getObjectUser(){
+        User user = ForgotPasswordFragmentArgs.fromBundle(getArguments()).getUser();
+        binding.tvEmailDetail.setText(user.getEmail());
+        binding.tvPasswordDetail.setText(user.getPassword());
     }
 
     @Override

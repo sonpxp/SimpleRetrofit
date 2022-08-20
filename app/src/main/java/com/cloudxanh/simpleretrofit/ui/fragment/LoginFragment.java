@@ -12,6 +12,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.cloudxanh.simpleretrofit.R;
+import com.cloudxanh.simpleretrofit.data.model.User;
 import com.cloudxanh.simpleretrofit.databinding.FragmentLoginBinding;
 import com.cloudxanh.simpleretrofit.ui.activity.MainActivity;
 
@@ -34,7 +35,7 @@ public class LoginFragment extends Fragment {
     private void handleView() {
         binding.btnLogin.setOnClickListener(view -> {
             String email = String.valueOf(binding.etEmail.getText());
-            String pass = String.valueOf(binding.etEmail.getText());
+            String pass = String.valueOf(binding.etPassword.getText());
             if (email.equals("admin") || pass.equals("admin")) {
                 navigateToMain();
             } else {
@@ -47,7 +48,12 @@ public class LoginFragment extends Fragment {
         });
 
         binding.tvForgotPassword.setOnClickListener(view -> {
-            navigateToForgotPassword();
+            // navigateToForgotPassword();
+
+            // test pass data object
+            String email = String.valueOf(binding.etEmail.getText());
+            String pass = String.valueOf(binding.etPassword.getText());
+            passObjectUserToForgotPassword(email, pass);
         });
     }
 
@@ -74,7 +80,15 @@ public class LoginFragment extends Fragment {
         // 2nd way
         LoginFragmentDirections.ToForgotPasswordFragment action =
                 LoginFragmentDirections.toForgotPasswordFragment();
-        action.setEmailArg(email);
+        //action.setEmailArg(email);
+        navController.navigate(action);
+    }
+
+    private void passObjectUserToForgotPassword(String email, String pass){
+        User user = new User(email, pass);
+        LoginFragmentDirections.ToForgotPasswordFragment action =
+                LoginFragmentDirections.toForgotPasswordFragment();
+        action.setUser(user);
         navController.navigate(action);
     }
 
