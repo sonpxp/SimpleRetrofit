@@ -36,10 +36,10 @@ public class LoginFragment extends Fragment {
         binding.btnLogin.setOnClickListener(view -> {
             String email = String.valueOf(binding.etEmail.getText());
             String pass = String.valueOf(binding.etPassword.getText());
-            if (email.equals("admin") || pass.equals("admin")) {
+            if (email.equals("admin") && pass.equals("root")) {
                 navigateToMain();
             } else {
-                Toast.makeText(requireActivity(), "Nhập sai account, tk = admin, mk = admin", Toast.LENGTH_LONG).show();
+                Toast.makeText(requireActivity(), "Nhập sai account, tk = admin, mk = root", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -67,9 +67,6 @@ public class LoginFragment extends Fragment {
     }
 
     private void navigateToForgotPassword() {
-        // get email text
-        String email = binding.etEmail.getText().toString().trim();
-
         // using bundle
         // The first way
         /*Bundle bundle = new Bundle();
